@@ -58,6 +58,6 @@ def test_unknown_metric():
     analyzer = CodeAnalyzer(files)
     expected = None
 
-    _, actual = analyzer.metric("UNKNOWN_METRIC")
+    actual = analyzer.metric("UNKNOWN_METRIC")
 
     assert expected == actual, f"Expected: {expected}, Actual: {actual}"

@@ -14,10 +14,9 @@ def main(path_to_repo, report):
     path_to_repo (str): Path to the repository.
     report (str): Path to xml file where to store report.
     '''
-    stats = cpp_stats.CppStats(path_to_repo)
+    stats = cpp_stats.CppStats(path_to_repo, True)
     with open(report, "w") as f:
         click.echo(stats.as_xml(), file=f)
-    
 
 if __name__ == "__main__":
     main()

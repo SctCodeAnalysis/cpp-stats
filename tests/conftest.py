@@ -1,5 +1,8 @@
 from pathlib import Path
+
 import pytest
+
+import utils.clang
 
 def rename_git_ignore_and_modules(repo_path: Path, to_test: bool = True):
     '''
@@ -58,3 +61,10 @@ def repo_with_ignr_modules():
     rename_git_ignore_and_modules(repo_path, False)
     yield repo_path
     rename_git_ignore_and_modules(repo_path, True)
+
+@pytest.fixture
+def clang_index():
+    '''
+    Initializes Clang using environment variable `LIBCLANG_LIBRARY_PATH`
+    '''
+    yield utils.clang.clang_index()

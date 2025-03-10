@@ -66,7 +66,7 @@ def test_not_implemented_add_operation_1():
     Tests exception during add operation of LOC and non LOC metrics.
     '''
     first = LinesOfCodeMetric(12)
-    second = Metric()
+    second = Metric("some metric")
 
     with pytest.raises(NotImplementedError):
         _, _ = first + second

@@ -19,6 +19,7 @@ class LinesOfCodeMetric(Metric):
         Parameters:
         value (float): Metric value.
         '''
+        super().__init__(METRIC_NAME)
         self.value = value
 
     def __add__(self, other):

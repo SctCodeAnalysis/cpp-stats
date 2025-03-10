@@ -11,6 +11,9 @@ class Metric:
     Class that stores metric name and value.
     '''
 
+    def __init__(self, name):
+        self._name = name
+
     def __add__(self, other):
         pass
 
@@ -19,6 +22,12 @@ class Metric:
         Returns metric value. Should be called since metric can be summarization of many files,
         namespaces, classes and etc.
         '''
+
+    def name(self):
+        '''
+        Returns name of metric.
+        '''
+        return self._name
 
 class BasicMetricCalculator:
     '''
