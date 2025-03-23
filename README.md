@@ -2,24 +2,29 @@
 
 [Full report](https://htmlpreview.github.io/?https://github.com/SctCodeAnalysis/cpp-stats/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
-| Name                                         |    Stmts |     Miss |   Cover |   Missing |
-|--------------------------------------------- | -------: | -------: | ------: | --------: |
-| src/cpp\_stats/\_\_init\_\_.py               |        0 |        0 |    100% |           |
-| src/cpp\_stats/analyzer.py                   |       21 |        2 |     90% |    20, 44 |
-| src/cpp\_stats/cpp\_stats.py                 |       21 |        6 |     71% |66, 77-80, 87 |
-| src/cpp\_stats/file\_sieve.py                |       59 |        0 |    100% |           |
-| src/cpp\_stats/metrics/\_\_init\_\_.py       |        0 |        0 |    100% |           |
-| src/cpp\_stats/metrics/lines\_of\_code.py    |       20 |        0 |    100% |           |
-| src/cpp\_stats/metrics/metric\_calculator.py |       11 |        1 |     91% |        15 |
-| tests/conftest.py                            |       36 |        0 |    100% |           |
-| tests/test\_analyzer.py                      |       26 |        0 |    100% |           |
-| tests/test\_cpp\_stats.py                    |       22 |        0 |    100% |           |
-| tests/test\_file\_sieve.py                   |       64 |        0 |    100% |           |
-| tests/test\_lines\_of\_code.py               |       38 |        0 |    100% |           |
-| tests/test\_sample.py                        |        4 |        0 |    100% |           |
-| tests/utils/\_\_init\_\_.py                  |        1 |        0 |    100% |           |
-| tests/utils/asserts.py                       |        2 |        0 |    100% |           |
-|                                    **TOTAL** |  **325** |    **9** | **97%** |           |
+| Name                                          |    Stmts |     Miss |   Cover |   Missing |
+|---------------------------------------------- | -------: | -------: | ------: | --------: |
+| src/cpp\_stats/\_\_init\_\_.py                |        0 |        0 |    100% |           |
+| src/cpp\_stats/analyzer.py                    |       28 |        5 |     82% | 34-37, 49 |
+| src/cpp\_stats/ast/ast\_tree.py               |       19 |       14 |     26% |22-31, 39-48 |
+| src/cpp\_stats/cpp\_stats.py                  |       31 |       11 |     65% |61, 70, 81-84, 91-93, 96, 110 |
+| src/cpp\_stats/file\_sieve.py                 |       59 |        0 |    100% |           |
+| src/cpp\_stats/metrics/\_\_init\_\_.py        |        0 |        0 |    100% |           |
+| src/cpp\_stats/metrics/lines\_of\_code.py     |       21 |        0 |    100% |           |
+| src/cpp\_stats/metrics/metric\_calculator.py  |       15 |        2 |     87% |    18, 30 |
+| src/cpp\_stats/metrics/number\_of\_classes.py |       20 |        4 |     80% | 43-45, 55 |
+| tests/clang/test\_ast\_tree.py                |       14 |        6 |     57% |     15-22 |
+| tests/clang/test\_number\_of\_classes.py      |       46 |       26 |     43% |30-44, 51-65 |
+| tests/conftest.py                             |       40 |        1 |     98% |        70 |
+| tests/test\_analyzer.py                       |       26 |        0 |    100% |           |
+| tests/test\_cpp\_stats.py                     |       22 |        0 |    100% |           |
+| tests/test\_file\_sieve.py                    |       64 |        0 |    100% |           |
+| tests/test\_lines\_of\_code.py                |       38 |        0 |    100% |           |
+| tests/test\_sample.py                         |        4 |        0 |    100% |           |
+| tests/utils/\_\_init\_\_.py                   |        1 |        0 |    100% |           |
+| tests/utils/asserts.py                        |        2 |        0 |    100% |           |
+| tests/utils/clang.py                          |       11 |        2 |     82% |     14-15 |
+|                                     **TOTAL** |  **461** |   **71** | **85%** |           |
 
 
 ## Setup coverage badge
