@@ -17,3 +17,19 @@ def mangle_cursor_name(node: clang.cindex.Cursor) -> str:
     if node.kind == clang.cindex.CursorKind.TRANSLATION_UNIT:
         return ""
     return mangle_cursor_name(node.semantic_parent) + '::' + node.displayname
+
+def is_definition_of_func_or_method(node: clang.cindex.Cursor) -> bool:
+    '''
+    Says whether node is definition of function or method or not.
+    
+    
+    Parameters:
+    node (clang.cindex.Cursor): cursor to check.
+    '''
+    return (
+        node.kind in [
+            clang.cindex.CursorKind.CXX_METHOD,
+            clang.cindex.CursorKind.FUNCTION_DECL
+        ]
+        and node.is_definition()
+    )

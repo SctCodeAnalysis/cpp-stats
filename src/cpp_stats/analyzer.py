@@ -11,6 +11,10 @@ from cpp_stats.metrics.length_of_method import MeanLengthOfMethodsCalculator
 from cpp_stats.metrics.length_of_method import MaxLengthOfMethodsCalculator
 from cpp_stats.metrics.number_of_methods import MeanNumberOfMethodsCalculator
 from cpp_stats.metrics.number_of_methods import MaxNumberOfMethodsCalculator
+from cpp_stats.metrics.cognitive_complexity import MeanCognitiveComplexityCalculator
+from cpp_stats.metrics.cognitive_complexity import MaxCognitiveComplexityCalculator
+from cpp_stats.metrics.cyclomatic_complexity import MeanCyclomaticComplexityCalculator
+from cpp_stats.metrics.cyclomatic_complexity import MaxCyclomaticComplexityCalculator
 from cpp_stats.metrics.metric_calculator import Metric
 from cpp_stats.ast.ast_tree import analyze_ast
 
@@ -31,7 +35,11 @@ class CodeAnalyzer:
             'MEAN_LENGTH_OF_METHODS': MeanLengthOfMethodsCalculator(),
             'MAX_LENGTH_OF_METHODS': MaxLengthOfMethodsCalculator(),
             'MEAN_NUMBER_OF_METHODS_PER_CLASS': MeanNumberOfMethodsCalculator(),
-            'MAX_NUMBER_OF_METHODS_PER_CLASS': MaxNumberOfMethodsCalculator()
+            'MAX_NUMBER_OF_METHODS_PER_CLASS': MaxNumberOfMethodsCalculator(),
+            'MEAN_COGNITIVE_COMPLEXITY': MeanCognitiveComplexityCalculator(),
+            'MAX_COGNITIVE_COMPLEXITY': MaxCognitiveComplexityCalculator(),
+            'MEAN_CYCLOMATIC_COMPLEXITY': MeanCyclomaticComplexityCalculator(),
+            'MAX_CYCLOMATIC_COMPLEXITY': MaxCyclomaticComplexityCalculator()
         }
         self._cache = {
             'LINES_OF_CODE' : None,
